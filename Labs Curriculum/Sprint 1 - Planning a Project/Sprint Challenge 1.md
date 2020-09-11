@@ -19,8 +19,26 @@ We took these questions and cooked them into your labs experience. Please answer
 ### Questions you need to answer
 
 1. Describe your **process** of breaking a release into user stories.
+   
+   In order to break a release down into user stories, I felt that the best approach was to imagine yourself as a user and actually visualize the experience that you want to have in as granular a sense as possible, breaking down each experience into things like main goal of an action, what actions you expect to take to get there, and what you expect to see upon taking those actions. Doing this over and over again exhaustively until you feel like you're out of ideas, and possibly a bit more after that, will capture 90% of what stories you need to build for a user.
+
 2. Choose a user story. Describe your **reasoning** as you broke down that particular user story into individual tasks.
+   
+   "As a user, I can view the major job industries of a city."
+
+   We ended up breaking this task as such:
+   -Create a wireframe for job industries display
+   -Create an API endpoint to respond with a list of top industries and relative shares
+   -Scrape data on employment from somewhere
+   -Determine how jobs are categorized into industries
+   -Create a top n industries pie chart visualization
+   -All above the features have been tested and deployed
+
+   The reasoning behind breaking down this task in this way was an iterative, kind of reverse step-by-step process, kind of visualizing the end result and moving backwards. The first task had to be building a wireframe for the job industries display. Upon having this skeleton, we needed to have an endpoint that would communicate this data to the front end. Now that we knew we had to communicate data to the front end, we had to source this data from somewhere. Once this data was sourced, decisions needed to be made on how to categorize the data, how many industries to display, how to visualize it, and how to return it to the front end. Once all of these technical tasks are coded up, test for bugs and deploy.
+
 3. How long do you think the above user story will take to complete? Explain your reasoning.
+   
+   I think this process should take about 3 weeks. We will continue discussing our big picture ideas for the product this week, and start coding some time next week. I've found that any time a task like this feels like it will be easy, the actual process has many unforeseen obstacles that you must figure out how to maneuver. In this specific user story, sourcing the data and cleaning it in a meaningful way feels like the biggest obstacle, and so many things can be much more difficult than expected when sourcing a data set.
 
 ## Prompt 2 - Communicating Technical Decisions
 
@@ -34,8 +52,17 @@ These sorts of questions inform your entire labs experience. You made a few tech
 ### Questions you need to answer
 
 1. Describe a technical decision you made. How did you make that decision?
+   
+   I suggested that we merge all 4 databases into a master database. I believed that querying one database instead of 4 different databases would be easier.
+
 2. What are some of the risks given the decision you made?
+   
+   Ultimately, we decided against this, as aggregating all the databases into one would be less performant due to the sheer size of the resulting database.
+
 3. What challenges do you foresee in using the architecture your team selected?
+   
+   I believe the biggest challenges that we will face will be more on the data side in terms of sourcing the data and cleaning it. Perhaps the biggest challenge will be mapping each respective database to the master lookup table, but I may be overcomplicating it in my head.
+   
 
 ## Prompt 3 - Professional Development 
 

@@ -20,8 +20,16 @@ We took these questions and cooked them into your labs experience. This week, yo
 ### Questions you need to answer
 
 1. Describe what you built this week. Link any relevant pull requests or paste screenshots of code.
+   
+   This week, I initiated deployment of the FastAPI to AWS by way of Elastic Beanstalk. This API will be used by the data science team to relay key descriptive statistics of a city as JSON objects to the front end in order to build visualizations for each respective descriptive statistic.
+
 2. How does what you built contribute to the overall product your team is building? What user problems does it help solve?
+   This API will allow the front end to communicate and retrieve data for a given city from the data science back end. In terms of user experience, this API enables the user to visualize relevant statistics for a given city.
+
 3. Describe your delivery process for what you built this week from ideation to breakdown to implementation. What challenges occurred during the delivery process that you didn't foresee?
+   
+   I was tasked with deploying the data science API to AWS. AWS and Elastic Beanstalk are two technologies that I am unfamiliar with, so the first step I took was reading through and understanding the deployment instructions from beginning to end, ensuring that I understood at the most fundamental level every step to be taken and every line of code. Upon reaching a working level of understanding of the process, I took care to follow each instruction to the T and stopping to understand when the instructions did not match up with what I was seeing on my machine. Eventually, I deployed the API to AWS, but not without some troubleshooting along the way.
+   One of the challenges that occurred along the way was an instruction to install pipx, and subsequently use pipx to install Elastic Beanstalk. I entered these lines of code as written, but once I reached the point of having to utilize EB in the CLI, "eb" was not recognized as a command. I went back and made sure that the steps I took matched up with the readme, and it did. After some Googling and failed attempts at solutions, I decided to just use pip to install Elastic Beanstalk, bypassing the utilization of pipx. This fixed my problem and I was able to deploy the initial version of the data science API.
 
 ## Prompt 2 - Communicating Teamwork
 
@@ -35,7 +43,13 @@ This week we taught you how to pair with other team members. You should have wor
 ### Questions you need to answer
 
 1. How did you work with another team member to deliver a feature this week? What role did you play?
+   
+   I pair programmed with a fellow data scientist to deploy an API to AWS. Initially, I played the role of navigator. I joined about halfway through his deployment process. I communicated with the driver and ensured that I understood the steps that he was taking and why he was taking them. When I felt like he was moving too quickly or I didn't fully understand what error he was running into, I asked him to go back and copy-paste the error message into our Slack chat so that I could troubleshoot it on my end. The solutions that we found required multiple uninstalls and reboots, and mutually agreed that, since I hadn't been there to catch any errors in the first half of deployment, we would switch roles (where I was the driver and he was the navigator) and walk through the readme from the beginning together.
+
 2. What did you learn this week from working in a team? How are you going to improve your teamwork in the future?
+   
+   I learned that, as cliche as it sounds, communication is key. Going a level deeper, making sure that all parties understand the problem in the same way and are visualizing the same solution is vital, and hashing out those issues before any redundant/unneeded work is done is a huge time saver (and can also alleviate any frustrations that might arise from said unneeded work). 
+   In order to improve my teamwork in the future, I will work on being available at all needed hours and keeping a line of communication open with the team.
 
 ## Prompt 3 - Professional Development Resume Updates
 
